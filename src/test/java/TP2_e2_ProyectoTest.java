@@ -1,5 +1,8 @@
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import tp2_template_composite.tp2_e2.*;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TP2_e2_ProyectoTest {
 
@@ -30,11 +33,9 @@ public class TP2_e2_ProyectoTest {
         historiaUsuario1.agregarItem(tarea2);
         historiaUsuario1.agregarItem(spike1);
 
-
         historiaUsuario2.agregarItem(tarea2);
         historiaUsuario2.agregarItem(tarea3);
         historiaUsuario2.agregarItem(spike2);
-
 
         historiaUsuario3.agregarItem(tarea1);
         historiaUsuario3.agregarItem(tarea2);
@@ -42,9 +43,17 @@ public class TP2_e2_ProyectoTest {
         historiaUsuario3.agregarItem(spike1);
         historiaUsuario3.agregarItem(spike2);
 
-        Proyecto proyecto = new Proyecto();
+        proyecto = new Proyecto();
         proyecto.agregarItem(historiaUsuario1);
         proyecto.agregarItem(historiaUsuario2);
         proyecto.agregarItem(historiaUsuario3);
+    }
+
+    @Test
+    public void calcularTiempoFinalizacionProyectoTest(){
+
+        int tiempoTotal = proyecto.calcularTiempoFinalizacion();
+
+        assertEquals(129, tiempoTotal, "El tiempo calculado no es el estimado.");
     }
 }

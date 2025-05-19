@@ -7,7 +7,20 @@ public class Spike extends Item{
     }
 
     @Override
+    protected int calcularTiempoSubitems() {
+        return tiempoRealizacion;
+    }
+
+    /*
+    public class Spike extends Item{
+
+    public Spike(int tiempoRealizacion) {
+        super(tiempoRealizacion);
+    }
+
+    @Override
     public int calcularTiempoFinalizacion() {
         return tiempoRealizacion;
     }
+    */
 }

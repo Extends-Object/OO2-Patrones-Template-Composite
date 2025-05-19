@@ -7,7 +7,20 @@ public class Tarea extends Item{
     }
 
     @Override
+    protected int calcularTiempoSubitems() {
+        return tiempoRealizacion;
+    }
+
+    /*
+    public class Tarea extends Item{
+
+    public Tarea(int tiempoRealizacion) {
+        super(tiempoRealizacion);
+    }
+
+    @Override
     public int calcularTiempoFinalizacion() {
         return tiempoRealizacion;
     }
+    */
 }
