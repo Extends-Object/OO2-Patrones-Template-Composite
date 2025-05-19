@@ -56,4 +56,12 @@ public class TP2_e2_ProyectoTest {
 
         assertEquals(129, tiempoTotal, "El tiempo calculado no es el estimado.");
     }
+
+    @Test
+    public void calcularTiempoParcialFinalizacionTest(){
+
+        int tiempoParcial = historiaUsuario1.calcularTiempoFinalizacion();
+
+        assertEquals(33, tiempoParcial, "El tiempo calculado no es el estimado.");
+    }
 }
