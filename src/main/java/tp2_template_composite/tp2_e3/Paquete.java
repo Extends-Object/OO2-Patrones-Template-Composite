@@ -4,18 +4,18 @@ import java.util.Collection;
 
 public class Paquete extends Seguro {
 
-    private Collection<Seguro> listaItem;
+    private Collection<Seguro> listaItems;
     private int cantidad;
 
     public Paquete(Collection<Seguro> listaItem) {
-        this.listaItem = listaItem;
+        this.listaItems = listaItem;
         this.cantidad = 0;
     }
 
     @Override
     public double calcularCostoFinal() {
         double total = 0;
-        for (Seguro item : listaItem) {
+        for (Seguro item : listaItems) {
             total += item.calcularCostoFinal();
             cantidad += item.contarHoja();
         }
