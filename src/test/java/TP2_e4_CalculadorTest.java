@@ -46,6 +46,5 @@ public class TP2_e4_CalculadorTest {
 
         assertEquals(24.2, precioFinalSinPromocion_NJ, "El precio calculado no es el correcto.");
         assertEquals(23, precioFinalPromocion_NJ, "El precio calculado no es el correcto.");
-
     }
 }
