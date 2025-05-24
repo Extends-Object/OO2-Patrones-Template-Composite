@@ -1,17 +1,14 @@
 package tp2_template_composite.tp2_e2;
 
-import java.util.ArrayList;
-import java.util.Collection;
-
-public class HistoriaUsuario extends ItemCompuesto{
+public class HistoriaUsuario extends ItemCompuesto {
 
     public HistoriaUsuario() {
         super();
     }
 
     /*
-    - Mantener la estructura actual? ---> Semánticamente Tarea y Spike no deberían agregar ítems (pero igual lo hacen)
-    - Collection<Item> y el metod agregarItem los paso a aca para que solo esta clase actúe como Composite.
+    - Mantener la estructura actual? ---> Tarea y Spike no deberían agregar ítems (pero igual pueden)
+    - Collection<Item> y el metod agregarItem los paso a aca para que solo esta clase actúe como Composite
 
 
     public class HistoriaUsuario extends Item{
